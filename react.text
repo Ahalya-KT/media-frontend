@@ -1,0 +1,156 @@
+REACT--Js library (front end developement)
+------------------------------------------------
+
+  basic Commands
+-----------------------
+-to create project :    npx create-react-app projectname
+-to rum project:       npm start
+to install material UI:     npm install @mui/material @emotion/react @emotion/styled
+-to build a project:     npm run build
+--to install react-bootstrap :     npm install react-bootstrap bootstrap
+--bootwatch-- for theme setting
+for getting icon for react from the website feather icons react  : npm i feather-icons-react
+
+basic concepts
+-------------------
+-reusable component based approach
+-JSX javascript Xml
+-fast
+
+
+front end difference
+ 
+ concept              angular                  react                       Vue
+ ----------------------------------------------------------------------------------
+ 1-developer       framework---google    library---meta/facebook          framework--opensource
+
+ 2-language         typescript            javascript                       javascript
+
+ 3-Dom             real Dom               Virutal Dom                      Virutal Dom
+
+ 4-data sharing     two data binding       one way data binding           two way data binding
+
+
+       react   component base application
+ ----------------------------------------------------
+
+ components :create a js file having a name starts with capital letter
+
+      two types of components
+ --------------------------------------
+ 1-class based component---statefull component
+ 2-function based component----stateless component
+
+--------------------------------------------------------------
+     to set path in react we use react router dom
+     step1 -install npm i react-router-dom from react dom website
+
+     Hook
+ --------------------------------
+
+ react hook - hook is predefined function and name starts with use keyword
+
+        hook syntax
+ -------------------------------
+
+  use predefined-function()
+  use state() [in function based component to create state we use [use state]] 
+ 
+
+       syntax for creating state
+  ----------------------------------------
+
+  const[statename,statevalueupdtionfunction]=useState()
+
+
+        state
+ --------------------
+ state is used to store values(also state has an advantage to transfer values) we can share to child component
+
+
+      props
+-----------------------------
+props is used to share data between parent and child
+
+     conditional rendering
+----------------------------------------
+
+        API CALL IN REACT
+----------------------------------------------------
+axios is library 
+to install axios into our project - npm i axios
+
+     features of axios
+-----------------------------
+---make http request from node.js
+---support the promise API
+---automatic transform for JSON data
+---cancel request
+---Automatic data object serialization to multipart/form-data and X-www form-urlencoded
+---make XML HttpRequest from the browser
+---transform request and response data
+
+Request Config
+------------------
+these are the available config options for making request.only the url is required. request will default to GET if method is not specified
+
+{
+   // ' url' is the server URL that will be used for the request
+      url:'./user'
+
+   // `method` is the request method to be used when making the request
+      method: 'get'
+
+  // `baseURL` will be prepended to `url` unless `url` is absolute.
+  // It can be convenient to set `baseURL` for an instance of axios to pass relative URLs
+  // to methods of that instance.
+     baseURL: 'https://some-domain.com/api/',
+
+  // `headers` are custom headers to be sent
+  headers: {'X-Requested-With': 'XMLHttpRequest'},
+
+   // `data` is the data to be sent as the request body
+  // Only applicable for request methods 'PUT', 'POST', 'DELETE , and 'PATCH'
+     
+     data: {
+    firstName: 'Fred'
+  },
+
+}
+
+   fetch is method used for api call. when we are using fetch we get two state
+---------------------------------------------------------------------------------
+  resolved state -  api response status 200 [.then()]
+  rejected state - if error we get using .catch()
+
+         Async and Await
+-------------------------------------
+
+ Spread operator
+ --------------------
+ to see all ojbect we use ...,name of state operator
+ if we enter value in id bt we can see all other like caption,thumbnail,ect.......
+
+-------------------------------------------------------------------------------------------------------------------
+
+---when we add a data in the add.js it should be show in the view.js automatically without refresh the page. 
+---home.jsx is the parent and add,view,category are the siblings. to share data from parent to child we use props. 
+---to share data from child to child or data sharing between sibilings[]we use-- STATE LIFTING
+State lifting --state should be created in home
+
+----------------------------------------------------------------------------------------------------------------------
+
+1-create a watch history tap in home page
+2-create a component for watch history
+3-(id,card name,link,date)create a watch history in db.json and value array
+4-click on the videoacard
+5-get watch history from json file to watch history component
+
+
+-------------------------
+to get automatic id we use uuid npm
+---------------------------------------------
+
+Drag and drop
+---------------------------------
+---giving an attribute dragabble  to the card
